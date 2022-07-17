@@ -13,6 +13,7 @@
               blue: "#1E4A7D",
               "light-blue": "#7D92AD",
               "light-grey": "#EFF0F1",
+              "dark-grey": "#929292",
               red: "#F87281",
               yellow: "#FBB03B",
               green: "#52B781",
@@ -26,7 +27,7 @@
       }
     </script>
   </head>
-  <body class="font-futura">
+  <body class="font-futura p-0 m-0">
     <nav class="bg-blue py-6 px-4 flex items-center justify-between">
       <img src="./assets/icons/logo-white.svg" alt="" />
       <img src="./assets/icons/menu.svg" alt="" />
@@ -54,6 +55,41 @@
           <button class="rounded-full px-2 border-2 border-green text-green">
             Education
           </button>
+        </div>
+      </div>
+    </section>
+    <section
+      class="p-5 bg-light-grey gap-3 flex flex-wrap items-center justify-center"
+    >
+      <h1 class="text-blue text-2xl font-futuraBold">Trending Posts</h1>
+      <div class="blogs flex flex-wrap gap-5">
+        <div class="post rounded-lg bg-white p-7 flex flex-wrap">
+          <img
+            class="rounded-lg"
+            src="./assets/images/pexels-andres-ayrton-6578830.png"
+            alt=""
+          />
+          <div class="metadata py-2 flex items-center justify-between w-full">
+            <div class="left">
+              <button class="rounded-full bg-yellow px-2 mr-1">
+                Lifestyle
+              </button>
+              <span class="text-dark-grey text-sm">2 Minute Read</span>
+            </div>
+            <div class="right">
+              <span class="text-dark-grey text-sm">Writer Name</span>
+            </div>
+          </div>
+          <div class="description">
+            <h1 class="text-3xl font-futuraBold">
+              THC for TLC? Let’s talk cannabis and intimacy.
+            </h1>
+            <p class="my-2">
+              2 line preview about the article. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              la met, consectetur adipiscin....
+            </p>
+          </div>
         </div>
       </div>
     </section>
