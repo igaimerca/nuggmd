@@ -12,6 +12,7 @@
             colors: {
               blue: "#1E4A7D",
               "light-blue": "#7D92AD",
+              "light-grey": "#EFF0F1"
             },
             fontFamily: {
               futura: "Futura",
@@ -22,10 +23,14 @@
       }
     </script>
   </head>
-  <body>
+  <body class="font-futura">
     <nav class="bg-blue py-6 px-4 flex items-center justify-between">
       <img src="./assets/icons/logo-white.svg" alt="" />
       <img src="./assets/icons/menu.svg" alt="" />
     </nav>
+    <section class="bg-light-grey rounded-full my-5 flex item-center justify-between px-3 w-10/12 min-h-[30px] m-auto">
+      <input type="text" class="bg-transparent w-11/12 outline-none" placeholder="Search">
+      <img src="./assets/icons/search.svg" alt="">
+    </section>
   </body>
 </html>
