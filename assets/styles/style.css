@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/Futura/FuturaPTBook.otf");
+}
+
+@font-face {
+  font-family: "FuturaBold";
+  src: url("../fonts/Futura/FuturaPTBold.otf");
+}
+@font-face {
+  font-family: "FuturaBoldOblique";
+  src: url("../fonts/Futura/FuturaPTBoldOblique.otf");
+}
+@font-face {
+  font-family: "FuturaBookOblique";
+  src: url("../fonts/Futura/FuturaPTBookOblique.otf");
+}
