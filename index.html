@@ -12,7 +12,10 @@
             colors: {
               blue: "#1E4A7D",
               "light-blue": "#7D92AD",
-              "light-grey": "#EFF0F1"
+              "light-grey": "#EFF0F1",
+              red: "#F87281",
+              yellow: "#FBB03B",
+              green: "#52B781",
             },
             fontFamily: {
               futura: "Futura",
@@ -28,9 +31,31 @@
       <img src="./assets/icons/logo-white.svg" alt="" />
       <img src="./assets/icons/menu.svg" alt="" />
     </nav>
-    <section class="bg-light-grey rounded-full my-5 flex item-center justify-between px-3 w-10/12 min-h-[30px] m-auto">
-      <input type="text" class="bg-transparent w-11/12 outline-none" placeholder="Search">
-      <img src="./assets/icons/search.svg" alt="">
+    <section
+      class="bg-light-grey rounded-full my-5 flex item-center justify-between px-3 w-10/12 min-h-[30px] m-auto"
+    >
+      <input
+        type="text"
+        class="bg-transparent w-11/12 outline-none"
+        placeholder="Search"
+      />
+      <img src="./assets/icons/search.svg" alt="" />
+    </section>
+    <section class="my-2 h-[45px] overflow-scroll">
+      <div class="px-3 flex gap-2 font-futuraBold w-full min-w-[900px]">
+        <h1>Filter by Category</h1>
+        <div class="posts-categories flex gap-2">
+          <button class="rounded-full px-2 border-2 border-red text-red">
+            Reviews
+          </button>
+          <button class="rounded-full px-2 border-2 border-yellow text-yellow">
+            Lifestyle
+          </button>
+          <button class="rounded-full px-2 border-2 border-green text-green">
+            Education
+          </button>
+        </div>
+      </div>
     </section>
   </body>
 </html>
