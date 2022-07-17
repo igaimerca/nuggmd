@@ -28,3 +28,6 @@
   background: url(../images/iStock-1357947313\ 1.png) no-repeat 0, 0 #1E4A7D;
   background-size: cover;
 }
+.subscribe-card {
+  box-shadow: 0px 30px 20px 4px #ccc;
+}
