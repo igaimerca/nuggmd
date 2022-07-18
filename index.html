@@ -97,11 +97,12 @@
 <img src="./assets/icons/search.svg" alt="" />
 </div>
 </section>
-<div class="bg-light-grey">
-  <section class="p-5 gap-3 flex flex-wrap items-center justify-center">
-    <h1 class="text-blue text-2xl font-futuraBold">Trending Posts</h1>
-        <div class="blogs flex flex-wrap gap-5">
-          <div class="post rounded-lg bg-white p-7 flex flex-wrap">
+<main class="w-full bg-light-grey">
+<div class="px-5 md:w-10/12 m-auto">
+  <section class="py-10 flex flex-col gap-2 items-start justify-around">
+  <h1 class="text-blue text-2xl font-futuraBold md:flex-row">Trending Posts</h1>
+  <div class="grid grid-lines md:grid-cols-2 md:grid-rows-3 gap-4 h-auto md:h-[613px]">
+          <div class="md:row-span-3 post rounded-lg bg-white p-7 flex flex-wrap">
             <img
               class="rounded-lg"
               src="./assets/images/pexels-andres-ayrton-6578830.png"
@@ -119,7 +120,7 @@
               </div>
             </div>
             <div class="description">
-              <h1 class="text-3xl font-futuraBold">
+              <h1 class="text-2xl font-futuraBold">
                 THC for TLC? Let’s talk cannabis and intimacy.
               </h1>
               <p class="my-2">
@@ -129,7 +130,7 @@
               </p>
             </div>
           </div>
-          <div class="post rounded-lg bg-white p-7 flex flex-wrap">
+          <div class="md:col-start-2 md:col-span-2 row-span-2 post rounded-lg bg-white p-7 flex flex-wrap">
             <img
               class="rounded-lg"
               src="./assets/images/Nugg Club Products Filled 2.png"
@@ -145,7 +146,7 @@
               </div>
             </div>
             <div class="description">
-              <h1 class="text-3xl font-futuraBold">
+              <h1 class="text-2xl font-futuraBold">
                 The best cannabis prices, guaranteed?
               </h1>
               <p class="my-2">
@@ -155,19 +156,18 @@
               </p>
             </div>
           </div>
-        </div>
-        <div
-          class="weekly-wellness-tip bg-light-blue w-full rounded-lg text-white p-7"
-        >
+        <div class="md:col-start-2 weekly-wellness-tip bg-light-blue w-full rounded-lg text-white p-7">
           <div class="header flex items-center justify-between">
             <small>Weekly Wellness Tip</small>
             <img src="./assets/icons/heart.svg" alt="" />
           </div>
-          <p class="text-3xl py-3 font-futuraDemi">
+          <p class="text-2xl py-3 font-futuraDemi">
             For better sleep, turn off your phone 30 minutes before sleep :)
           </p>
-        </div>
-      </section>
+        </div> 
+  </div>
+  </section>
+
       <section class="p-5 gap-3 flex flex-wrap items-center justify-center">
         <h1 class="text-blue text-2xl font-futuraBold">New Posts</h1>
         <div class="blogs flex flex-wrap gap-5">
@@ -189,7 +189,7 @@
               </div>
             </div>
             <div class="description">
-              <h1 class="text-3xl font-futuraBold">
+              <h1 class="text-2xl font-futuraBold">
                 THC for TLC? Let’s talk cannabis and intimacy.
               </h1>
               <p class="my-2">
@@ -215,7 +215,7 @@
               </div>
             </div>
             <div class="description">
-              <h1 class="text-3xl font-futuraBold">
+              <h1 class="text-2xl font-futuraBold">
                 The best cannabis prices, guaranteed?
               </h1>
               <p class="my-2">
@@ -243,7 +243,7 @@
               </div>
             </div>
             <div class="description">
-              <h1 class="text-3xl font-futuraBold">
+              <h1 class="text-2xl font-futuraBold">
                 The best cannabis prices, guaranteed?
               </h1>
               <p class="my-2">
@@ -271,7 +271,7 @@
               </div>
             </div>
             <div class="description">
-              <h1 class="text-3xl font-futuraBold">
+              <h1 class="text-2xl font-futuraBold">
                 THC for TLC? Let’s talk cannabis and intimacy.
               </h1>
               <p class="my-2">
@@ -304,7 +304,7 @@
               </div>
             </div>
             <div class="description">
-              <h1 class="text-3xl font-futuraBold">
+              <h1 class="text-2xl font-futuraBold">
                 THC for TLC? Let’s talk cannabis and intimacy.
               </h1>
               <p class="my-2">
@@ -330,7 +330,7 @@
               </div>
             </div>
             <div class="description">
-              <h1 class="text-3xl font-futuraBold">
+              <h1 class="text-2xl font-futuraBold">
                 The best cannabis prices, guaranteed?
               </h1>
               <p class="my-2">
@@ -374,7 +374,7 @@
             </div>
           </div>
           <div class="description">
-            <h1 class="text-3xl font-futuraBold">
+            <h1 class="text-2xl font-futuraBold">
               The best cannabis prices, guaranteed?
             </h1>
             <p class="my-2">
@@ -402,7 +402,7 @@
             </div>
           </div>
           <div class="description">
-            <h1 class="text-3xl font-futuraBold">
+            <h1 class="text-2xl font-futuraBold">
               THC for TLC? Let’s talk cannabis and intimacy.
             </h1>
             <p class="my-2">
@@ -420,6 +420,8 @@
           Load More Articles
         </button>
       </section>
+</div>
+</main>
       <section
         class="get-your-card p-[4.5rem] flex flex-col items-center justify-center gap-4 text-white"
       >
@@ -517,7 +519,7 @@
             </ul>      
           </div>
         </div>
-      </div>
+      </section>
     </footer>
   </body>
 </html>
