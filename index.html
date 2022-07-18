@@ -40,8 +40,8 @@
     <a href="https://nuggmd.com/" class="flex items-center">
         <img src="./assets/icons/logo-red.svg" class="mr-3 h-6 sm:h-9" alt="Logo">
     </a>
-    <button type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-      <span class="sr-only">Open/Close main menu</span>
+    <button type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+      <span class="sr-only">Toggle main menu</span>
       <img src="./assets/icons/menu.svg" alt="">  
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
@@ -69,36 +69,37 @@
     </div>
   </div>
 </nav>
-
-    <section
-      class="bg-light-grey rounded-full my-5 flex item-center justify-between px-3 w-10/12 min-h-[30px] m-auto"
-    >
-      <input
-        type="text"
-        class="bg-transparent w-11/12 outline-none"
-        placeholder="Search"
-      />
-      <img src="./assets/icons/search.svg" alt="" />
-    </section>
-    <section class="my-2 h-[45px] overflow-scroll">
-      <div class="px-3 flex gap-2 font-futuraBold w-full min-w-[900px]">
-        <h1>Filter by Category</h1>
-        <div class="posts-categories flex gap-2">
-          <button class="rounded-full px-2 border-2 border-red text-red">
-            Reviews
-          </button>
-          <button class="rounded-full px-2 border-2 border-yellow text-yellow">
-            Lifestyle
-          </button>
-          <button class="rounded-full px-2 border-2 border-green text-green">
-            Education
-          </button>
-        </div>
-      </div>
-    </section>
-    <div class="bg-light-grey">
-      <section class="p-5 gap-3 flex flex-wrap items-center justify-center">
-        <h1 class="text-blue text-2xl font-futuraBold">Trending Posts</h1>
+<section class="flex flex-col-reverse items-center justify-center my-5">
+  <div class="w-full my-2 h-[45px] overflow-y-hidden overflow-x-scroll md:overflow-hidden">
+    <div class="px-3 flex gap-3 font-futuraDemi w-full min-w-[900px]">
+      <h1 class="font-futuraDemi text-lg">Filter by Category</h1>
+      <div class="posts-categories flex gap-2">
+        <button class="rounded-full px-3 border-2 border-red text-red">
+          Reviews
+        </button>
+        <button class="rounded-full px-3 border-2 border-yellow text-yellow">
+        Lifestyle
+      </button>
+      <button class="rounded-full px-3 border-2 border-green text-green">
+        Education
+      </button>
+      <button class="rounded-full px-3 border-2 border-aqua text-aqua">
+        Law
+      </button>
+      <button class="rounded-full px-3 border-2 border-medium-orchid text-medium-orchid">
+        News
+      </button>
+    </div>
+  </div>
+</div>
+<div class="md:w-4/12 bg-light-grey rounded-full my-3 flex item-center justify-between px-3 w-10/12 min-h-[30px] m-auto">
+<input type="text" class="bg-transparent w-11/12 outline-none" placeholder="Search"/>
+<img src="./assets/icons/search.svg" alt="" />
+</div>
+</section>
+<div class="bg-light-grey">
+  <section class="p-5 gap-3 flex flex-wrap items-center justify-center">
+    <h1 class="text-blue text-2xl font-futuraBold">Trending Posts</h1>
         <div class="blogs flex flex-wrap gap-5">
           <div class="post rounded-lg bg-white p-7 flex flex-wrap">
             <img
