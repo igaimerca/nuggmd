@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,10 +34,42 @@
     </script>
   </head>
   <body class="font-futura p-0 m-0">
-    <nav class="bg-blue py-6 px-4 flex items-center justify-between">
-      <img src="./assets/icons/logo-white.svg" alt="" />
-      <img src="./assets/icons/menu.svg" alt="" />
-    </nav>
+    <!-- Mobile navbar -->
+<nav class="bg-blue px-2 sm:px-4 py-5">
+  <div class="container flex flex-wrap justify-between items-center mx-auto">
+    <a href="https://nuggmd.com/" class="flex items-center">
+        <img src="./assets/icons/logo-red.svg" class="mr-3 h-6 sm:h-9" alt="Logo">
+    </a>
+    <button type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+      <span class="sr-only">Open/Close main menu</span>
+      <img src="./assets/icons/menu.svg" alt="">  
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+        <li>
+          <a href="#" class="block py-2 pr-4 pl-3 underline text-white" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pr-4 pl-3 hover:underline text-white">Blog</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pr-4 pl-3 hover:underline text-white">Contact</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pr-4 pl-3 hover:underline text-white">Login</a>
+        </li>
+        <li>
+          <button
+          class="block py-2 pr-4 pl-3 rounded-md bg-green w-full px-2 text-white"
+        >
+          Get Your Card
+        </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
     <section
       class="bg-light-grey rounded-full my-5 flex item-center justify-between px-3 w-10/12 min-h-[30px] m-auto"
     >
@@ -431,6 +463,58 @@
             <img src="./assets/icons/email.png" alt="">
             <img src="./assets/icons/yelp.png" alt="">
             <button class="border-[3px] border-green text-green rounded-md px-3 py-2 font-futuraDemi">Get Your Card</button>
+        </div>
+        <div class="flex">
+          <div>
+            <h2 class="text-blue font-futuraDemi">Navigate</h2>
+            <ul class="text-grey">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Verify A Patient</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>      
+          </div>
+          <div>
+            <h2 class="text-blue font-futuraDemi">Contact</h2>
+            <ul class="text-grey">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Doctors</a></li>
+            </ul>      
+          </div>
+          <div>
+            <h2 class="text-blue font-futuraDemi">Legal</h2>
+            <ul class="text-grey">
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>      
+          </div>
+        </div>
+        <div class="flex">
+          <div>
+            <h2 class="text-blue font-futuraDemi">Navigate</h2>
+            <ul class="text-grey">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Verify A Patient</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>      
+          </div>
+          <div>
+            <h2 class="text-blue font-futuraDemi">Contact</h2>
+            <ul class="text-grey">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Doctors</a></li>
+            </ul>      
+          </div>
+          <div>
+            <h2 class="text-blue font-futuraDemi">Legal</h2>
+            <ul class="text-grey">
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>      
+          </div>
         </div>
       </div>
     </footer>
