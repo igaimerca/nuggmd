@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blue: "#1E4A7D",
+                        "light-blue": "#7D92AD",
+                        "light-grey": "#EFF0F1",
+                        "dark-grey": "#929292",
+                        grey: "#A1A1A1",
+                        red: "#F87281",
+                        yellow: "#FBB03B",
+                        green: "#52B781",
+                        aqua: "#41C8F2",
+                        orange: "#F78178",
+                        "medium-orchid": "#B78AF1",
+                    },
+                    fontFamily: {
+                        futura: "Futura",
+                        futuraBold: "FuturaBold",
+                        futuraDemi: "FuturaDemi",
+                        futuraLight: "FuturaLight",
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="font-futura p-0 m-0 bg-light-grey">
+    <!-- navbar -->
+    <header class="w-full bg-white">
+        <nav class="bg-blue px-2 sm:px-4 py-5">
+            <div class="container flex flex-wrap justify-between items-center mx-auto">
+                <a href="https://nuggmd.com/" class="flex items-center">
+                    <img src="./assets/icons/logo-red.svg" class="mr-3 h-6 sm:h-9" alt="Logo">
+                </a>
+                <button type="button"
+                    class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                    <span class="sr-only">Toggle main menu</span>
+                    <img src="./assets/icons/menu.svg" alt="">
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                        <li>
+                            <a href="#" class="block py-2 pr-4 pl-3 underline text-white" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 pr-4 pl-3 hover:underline text-white">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 pr-4 pl-3 hover:underline text-white">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 pr-4 pl-3 hover:underline text-white">Login</a>
+                        </li>
+                        <li>
+                            <button class="block py-2 pr-4 pl-3 rounded-md bg-green w-full px-2 text-white">
+                                Get Your Card
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="py-3 flex md:w-10/12 flex-wrap w-full m-auto md:flex-row flex-col-reverse items-center md:justify-center my-5">
+            <div class="w-full md:w-auto my-2 h-[45px] overflow-y-hidden overflow-x-scroll md:overflow-hidden">
+                <div class="px-3 flex gap-3 font-futuraDemi w-[900px] md:w-auto">
+                    <h1 class="font-futuraDemi text-lg">Filter by Category</h1>
+                    <div class="posts-categories flex gap-2">
+                        <button class="rounded-full px-4 py-0 border-2 border-red text-red">
+                            Reviews
+                        </button>
+                        <button class="rounded-full px-4 py-0 border-2 border-yellow text-yellow">
+                            Lifestyle
+                        </button>
+                        <button class="rounded-full px-4 py-0 border-2 border-green text-green">
+                            Education
+                        </button>
+                        <button class="rounded-full px-4 py-0 border-2 border-aqua text-aqua">
+                            Law
+                        </button>
+                        <button class="rounded-full px-4 py-0 border-2 border-medium-orchid text-medium-orchid">
+                            News
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="md:w-4/12 bg-light-grey rounded-full my-3 flex item-center justify-between px-4 w-10/12 min-h-[40px] m-auto">
+                <input type="text" class="bg-transparent w-11/12 outline-none" placeholder="Search" />
+                <img src="./assets/icons/search.svg" alt="" />
+            </div>
+        </section>
+    </header>
+    <main class="max-w-7xl m-auto">
+        <section class="py-10 flex flex-col gap-2 items-start justify-around">
+            <h1 class="text-blue text-2xl font-futuraBold md:flex-row">Trending Posts</h1>
+            <div class="grid grid-lines md:grid-cols-2 md:grid-rows-3 gap-4 h-auto md:h-[590x]">
+                <div
+                    class="before:absolute before:inset-0 before:w-full before:h-full md:row-span-3 post rounded-lg bg-white p-7 flex flex-wrap">
+                    <img class="rounded-lg object-cover" src="./assets/images/pexels-andres-ayrton-6578830.png"
+                        alt="" />
+                    <div class="metadata py-2 flex items-center justify-between w-full">
+                        <div class="left">
+                            <a href="#" class="relative z-50 rounded-full bg-yellow px-2 mr-1">
+                                Lifestyle
+                            </a>
+                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                        </div>
+                        <div class="right">
+                            <span class="text-dark-grey text-sm">Writer Name</span>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h1 class="text-2xl font-futuraBold">
+                            THC for TLC? Let’s talk cannabis and intimacy.
+                        </h1>
+                        <p class="my-2">
+                            2 line preview about the article. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            la met, consectetur adipiscin....
+                        </p>
+                    </div>
+                </div>
+                <div class="md:col-start-2 md:col-span-2 row-span-2 post gap-2 rounded-lg bg-white p-7 flex flex-wrap">
+                    <img class="rounded-lg w-full" src="./assets/images/Nugg Club Products Filled 2.png" alt="" />
+                    <div class="metadata py-2 flex items-center justify-between w-full">
+                        <div class="left">
+                            <button class="rounded-full bg-red px-2 mr-1">Review</button>
+                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                        </div>
+                        <div class="right">
+                            <span class="text-dark-grey text-sm">Writer Name</span>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h1 class="text-2xl font-futuraBold">
+                            The best cannabis prices, guaranteed?
+                        </h1>
+                        <p class="my-2">
+                            2 line preview about the article. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            la met, consectetur adipiscin....
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="md:col-start-2 md:col-span-2 weekly-wellness-tip bg-light-blue w-full rounded-lg text-white p-7">
+                    <div class="header flex items-center justify-between">
+                        <small>Weekly Wellness Tip</small>
+                        <img src="./assets/icons/heart.svg" alt="" />
+                    </div>
+                    <p class="text-2xl py-3 font-futuraDemi">
+                        For better sleep, turn off your phone 30 minutes before sleep :)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-5 gap-3 flex flex-wrap items-center justify-start">
+            <h1 class="text-blue text-2xl font-futuraBold">New Posts</h1>
+            <div class="blogs flex flex-wrap gap-5">
+                <div class="post rounded-lg bg-white p-7 flex flex-wrap items-center justify-around">
+                    <img class="rounded-lg md:w-5/12" src="./assets/images/iStock-1249601315 1.png" alt="" />
+                    <div class="md:w-6/12">
+                        <div class="metadata py-2 flex items-center justify-between w-full">
+                            <div class="left">
+                                <button class="rounded-full bg-green px-2 mr-1">
+                                    Education
+                                </button>
+                                <span class="text-dark-grey text-sm">2 Minute Read</span>
+                            </div>
+                            <div class="right">
+                                <span class="text-dark-grey text-sm">Writer Name</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <h1 class="text-2xl font-futuraBold">
+                                Lorem Ipsum dolor si amet.
+                            </h1>
+                            <p class="my-2">
+                                2 line preview about the article. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                la met, consectetur adipiscin....
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="post rounded-lg bg-white p-7 flex flex-wrap items-center justify-around">
+                    <img class="rounded-lg md:w-5/12" src="./assets/images/pexels-ketut-subiyanto-4473878 1.png"
+                        alt="" />
+                    <div class="md:w-6/12">
+                        <div class="metadata py-2 flex items-center justify-between w-full">
+                            <div class="left">
+                                <button class="rounded-full bg-aqua px-2 mr-1">Laws</button>
+                                <span class="text-dark-grey text-sm">2 Minute Read</span>
+                            </div>
+                            <div class="right">
+                                <span class="text-dark-grey text-sm">Writer Name</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <h1 class="text-2xl font-futuraBold">
+                                Lorem Ipsum dolor si amet.
+                            </h1>
+                            <p class="my-2">
+                                2 line preview about the article. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                la met, consectetur adipiscin....
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="post rounded-lg bg-white p-7 flex flex-wrap items-center justify-around">
+                    <img class="rounded-lg md:w-5/12" src="./assets/images/pexels-cottonbro-4045538 2.png" alt="" />
+                    <div class="md:w-6/12">
+                        <div class="metadata py-2 flex items-center justify-between w-full">
+                            <div class="left">
+                                <button class="rounded-full bg-medium-orchid px-2 mr-1">
+                                    News
+                                </button>
+                                <span class="text-dark-grey text-sm">2 Minute Read</span>
+                            </div>
+                            <div class="right">
+                                <span class="text-dark-grey text-sm">Writer Name</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <h1 class="text-2xl font-futuraBold">
+                                Lorem Ipsum dolor si amet.
+                            </h1>
+                            <p class="my-2">
+                                2 line preview about the article. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                la met, consectetur adipiscin....
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="post rounded-lg bg-white p-7 flex flex-wrap items-center justify-around">
+                    <img class="rounded-lg md:w-5/12" src="./assets/images/pexels-cottonbro-4045538 2.png" alt="" />
+                    <div class="md:w-6/12">
+                        <div class="metadata py-2 flex items-center justify-between w-full">
+                            <div class="left">
+                                <button class="rounded-full bg-yellow px-2 mr-1">
+                                    Lifestyle
+                                </button>
+                                <span class="text-dark-grey text-sm">2 Minute Read</span>
+                            </div>
+                            <div class="right">
+                                <span class="text-dark-grey text-sm">Writer Name</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <h1 class="text-2xl font-futuraBold">
+                                Lorem Ipsum dolor si amet.
+                            </h1>
+                            <p class="my-2">
+                                2 line preview about the article. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                la met, consectetur adipiscin....
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="p-5 gap-3 flex flex-wrap items-center justify-start">
+            <h1 class="text-blue text-2xl font-futuraBold">Top Posts</h1>
+            <div class="grid grid-lines md:grid-cols-3 md:grid-rows-3 gap-5 pb-7">
+                <div class="post rounded-lg bg-white p-7 flex flex-wrap">
+                    <img class="rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png" alt="" />
+                    <div class="metadata py-2 flex items-center justify-between w-full">
+                        <div class="left">
+                            <button class="rounded-full bg-green px-2 mr-1">
+                                Education
+                            </button>
+                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                        </div>
+                        <div class="right">
+                            <span class="text-dark-grey text-sm">Writer Name</span>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h1 class="text-2xl font-futuraBold">
+                            THC for TLC? Let’s talk cannabis and intimacy.
+                        </h1>
+                        <p class="my-2">
+                            2 line preview about the article. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            la met, consectetur adipiscin....
+                        </p>
+                    </div>
+                </div>
+                <div class="post rounded-lg bg-white p-7 flex flex-wrap">
+                    <img class="rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png" alt="" />
+                    <div class="metadata py-2 flex items-center justify-between w-full">
+                        <div class="left">
+                            <button class="rounded-full bg-green px-2 mr-1">
+                                Education
+                            </button>
+                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                        </div>
+                        <div class="right">
+                            <span class="text-dark-grey text-sm">Writer Name</span>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h1 class="text-2xl font-futuraBold">
+                            THC for TLC? Let’s talk cannabis and intimacy.
+                        </h1>
+                        <p class="my-2">
+                            2 line preview about the article. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            la met, consectetur adipiscin....
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Ad -->
+                <div class="md:row-span-2 w-full bg-orange">
+                    <h2 class="w-10/12 m-auto text-3xl text-white py-3 font-futuraDemi">
+                        Dispensaries <br />
+                        hate us. <br />
+                        <span class="text-black">Wallets love us.</span>
+                    </h2>
+                    <img src="./assets/images/Nugg Club Products Filled 1.png" alt="" />
+                    <div class="w-full flex items-center justify-center pb-6">
+                        <button class="text-white border-2 border-white rounded-full p-3">
+                            Save 40-60% on every delivery order
+                        </button>
+                    </div>
+                </div>
+                <div class="post rounded-lg bg-white p-7 flex flex-wrap">
+                    <img class="rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png" alt="" />
+                    <div class="metadata py-2 flex items-center justify-between w-full">
+                        <div class="left">
+                            <button class="rounded-full bg-green px-2 mr-1">
+                                Education
+                            </button>
+                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                        </div>
+                        <div class="right">
+                            <span class="text-dark-grey text-sm">Writer Name</span>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h1 class="text-2xl font-futuraBold">
+                            THC for TLC? Let’s talk cannabis and intimacy.
+                        </h1>
+                        <p class="my-2">
+                            2 line preview about the article. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            la met, consectetur adipiscin....
+                        </p>
+                    </div>
+                </div>
+                <div class="post rounded-lg bg-white p-7 flex flex-wrap">
+                    <img class="rounded-lg" src="./assets/images/pexels-andres-ayrton-6578830.png" alt="" />
+                    <div class="metadata py-2 flex items-center justify-between w-full">
+                        <div class="left">
+                            <button class="rounded-full bg-aqua px-2 mr-1">Laws</button>
+                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                        </div>
+                        <div class="right">
+                            <span class="text-dark-grey text-sm">Writer Name</span>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h1 class="text-2xl font-futuraBold">
+                            The best cannabis prices, guaranteed?
+                        </h1>
+                        <p class="my-2">
+                            2 line preview about the article. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            la met, consectetur adipiscin....
+                        </p>
+                    </div>
+                </div>
+                <div class="post rounded-lg bg-white p-7 flex flex-wrap">
+                    <img class="rounded-lg" src="./assets/images/pexels-ketut-subiyanto-4473878 1.png" alt="" />
+                    <div class="metadata py-2 flex items-center justify-between w-full">
+                        <div class="left">
+                            <button class="rounded-full bg-medium-orchid px-2 mr-1">
+                                News
+                            </button>
+                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                        </div>
+                        <div class="right">
+                            <span class="text-dark-grey text-sm">Writer Name</span>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h1 class="text-2xl font-futuraBold">
+                            The best cannabis prices, guaranteed?
+                        </h1>
+                        <p class="my-2">
+                            2 line preview about the article. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            la met, consectetur adipiscin....
+                        </p>
+                    </div>
+                </div>
+                <div class="post rounded-lg bg-white p-7 flex flex-wrap">
+                    <img class="rounded-lg object-cover" src="./assets/images/pexels-andres-ayrton-6578830.png"
+                        alt="" />
+                    <div class="metadata py-2 flex items-center justify-between w-full">
+                        <div class="left">
+                            <button class="rounded-full bg-yellow px-2 mr-1">
+                                Lifestyle
+                            </button>
+                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                        </div>
+                        <div class="right">
+                            <span class="text-dark-grey text-sm">Writer Name</span>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <h1 class="text-2xl font-futuraBold">
+                            THC for TLC? Let’s talk cannabis and intimacy.
+                        </h1>
+                        <p class="my-2">
+                            2 line preview about the article. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            la met, consectetur adipiscin....
+                        </p>
+                    </div>
+                </div>
+                <!-- Ad -->
+                <div class="w-full">
+                    <img class="object-cover w-full h-full" src="./assets/images/Z email 22 1.png" alt="" />
+                </div>
+            </div>
+            <button class="rounded-md bg-light-blue w-full text-white h-[60px] text-xl font-futuraDemi">
+                Load More Articles
+            </button>
+        </section>
+    </main>
+    <section class="get-your-card my-10 p-[4.5rem] flex flex-col items-center justify-center gap-4 text-white">
+        <h2 class="text-2xl font-futuraDemi">The NuggMD Promise</h2>
+        <div class="md:w-7/12">
+            <p class="font-futuraLight">
+                We are a team of technology enthusiasts and state-licensed doctors. We
+                believe all people deserve access to medical cannabis if they think it
+                might improve their quality of life. Since our founding in 2015 we’ve
+                held ourselves to the highest standards when recruiting physicians,
+                journalists, and legal experts to join our team.
+            </p>
+            <p class="font-futuraLight">
+                It’s because of this network of passionate professionals that NuggMD
+                is able to provide access to reliable cannabis information,
+                trustworthy medical practitioners, and proactive updates in the
+                cannabis healthcare ecosystem.
+            </p>
+        </div>
+        <button class="rounded-md bg-green w-full md:w-5/12 h-[57px] text-xl font-futuraDemi">
+            Get Your Card
+        </button>
+        <span class="text-grey">Billed only if approved.</span>
+    </section>
+    <section
+        class="subscribe-card rounded-md bg-light-blue w-10/12 md:w-7/12 md:justify-center md:items-center m-auto my-20 p-10 text-white md: flex flex-col gap-2">
+        <h2 class="text-2xl font-futuraDemi">Weekly wellness
+            tips and updates? Subscribe :)</h2>
+        <span class="font-futuraLight text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna.</span>
+        <div class="bg-white shadow-md rounded-md py-2 my-2 flex items-center justify-between px-2 md:w-10/12">
+            <input type="text" placeholder="enter your email"
+                class="ml-2 text-black bg-transparent outline-none w-6/12">
+            <button class="rounded-md bg-blue p-3 md:w-3/12">signup</button>
+        </div>
+    </section>
+    <div class="flex items-center justify-center w-full py-3">
+        <img src="./assets/icons/logo-blue.svg" alt="">
+    </div>
+
+    <footer class="flex flex-wrap items-center justify-around py-12 gap-4">
+        <div class="md:flex-col-reverse share gap-4 flex items-center justify-around py-6">
+            <div class="flex gap-3 gap-2">
+                <img src="./assets/icons/youtube.png" alt="">
+                <img src="./assets/icons/instagram.png" alt="">
+                <img src="./assets/icons/email.png" alt="">
+                <img src="./assets/icons/yelp.png" alt="">
+            </div>
+            <button class="border-[3px] border-green text-green rounded-md px-3 py-1 font-futuraDemi">Get Your
+                Card</button>
+        </div>
+        <div class="flex gap-4">
+            <div>
+                <h2 class="text-blue font-futuraDemi">Navigate</h2>
+                <ul class="text-grey">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Verify A Patient</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-blue font-futuraDemi">Contact</h2>
+                <ul class="text-grey">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Doctors</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-blue font-futuraDemi">Legal</h2>
+                <ul class="text-grey">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex gap-4">
+            <div>
+                <h2 class="text-blue font-futuraDemi">Navigate</h2>
+                <ul class="text-grey">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Verify A Patient</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-blue font-futuraDemi">Contact</h2>
+                <ul class="text-grey">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Doctors</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-blue font-futuraDemi">Legal</h2>
+                <ul class="text-grey">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        </section>
+    </footer>
+</body>
+
+</html>
