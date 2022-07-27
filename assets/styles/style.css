@@ -1,29 +1,3 @@
-@font-face {
-  font-family: "Futura";
-  src: url("../fonts/Futura/FuturaPTBook.otf");
-}
-
-@font-face {
-  font-family: "FuturaBold";
-  src: url("../fonts/Futura/FuturaPTBold.otf");
-}
-@font-face {
-  font-family: "FuturaLight";
-  src: url("../fonts/Futura/FuturaPTLight.otf");
-}
-@font-face {
-  font-family: "FuturaDemi";
-  src: url("../fonts/Futura/FuturaPTDemi.otf");
-}
-@font-face {
-  font-family: "FuturaBoldOblique";
-  src: url("../fonts/Futura/FuturaPTBoldOblique.otf");
-}
-@font-face {
-  font-family: "FuturaBookOblique";
-  src: url("../fonts/Futura/FuturaPTBookOblique.otf");
-}
-
 .get-your-card {
   background: url(../images/iStock-1357947313\ 1.png) no-repeat 0, 0 #1E4A7D;
   background-size: cover;
