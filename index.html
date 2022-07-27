@@ -11,23 +11,40 @@
             theme: {
                 extend: {
                     colors: {
-                        blue: "#1E4A7D",
-                        "light-blue": "#7D92AD",
-                        "light-grey": "#EFF0F1",
-                        "dark-grey": "#929292",
-                        grey: "#A1A1A1",
-                        red: "#F87281",
-                        yellow: "#FBB03B",
-                        green: "#52B781",
-                        aqua: "#41C8F2",
-                        orange: "#F78178",
-                        "medium-orchid": "#B78AF1",
+                        'nugg-blue': '#1E4A7D',
+                        'nugg-blue-shade': '#183b64',
+                        'nugg-blue-tint': '#7892b1',
+                        'nugg-blue-shade-2': '#0f253f',
+                        'nugg-blue-tint-2': '#7892B1',
+                        'nugg-red': '#D46870',
+                        'nugg-red-shade': '#aa535a',
+                        'nugg-red-tint': '#dd868d',
+                        'nugg-green': '#52b781',
+                        'nugg-green-shade': '#b64d58',
+                        'nugg-green-tint': '#e9808b',
+                        'nugg-ui-b1': '#d2dbe5',
+                        'nugg-ui-b2': '#f0f0f0',
+                        'nugg-ui-b3': '#dddcde',
+                        'nugg-black': '#060f19',
+                        'nugg-success': '#52B781',
+                        'nugg-notification': '#245999',
+                        'nugg-error': '#F4AC38',
+                        'nugg-sky': '#31c8f2',
+                        'nugg-lavander': '#B78AF1',
+                        'nugg-whiskey': '#E49760',
+                        'nugg-butterscotch': '#FBB03B',
+                        'nugg-watermelon': '#F87281',
+                        'nugg-cranberry': '#E4606E',
+                        'nugg-orange': "#F78178",
+                        "nugg-dark-grey": "#929292",
                     },
                     fontFamily: {
                         futura: "Futura",
                         futuraBold: "FuturaBold",
                         futuraDemi: "FuturaDemi",
                         futuraLight: "FuturaLight",
+                        'futura-pt': ['futura-pt', 'sans-serif'],
+                        'futura-pt-bold': ['futura-pt-bold', 'sans-serif'],
                     },
                 },
             },
@@ -35,10 +52,10 @@
     </script>
 </head>
 
-<body class="font-futura p-0 m-0 bg-light-grey">
+<body class="font-futura p-0 m-0 bg-nugg-ui-b2">
     <!-- navbar -->
     <header class="w-full bg-white">
-        <nav class="bg-blue px-2 sm:px-4 py-5">
+        <nav class="bg-nugg-blue px-2 sm:px-4 py-5">
             <div class="container flex flex-wrap justify-between items-center mx-auto">
                 <a href="https://nuggmd.com/" class="flex items-center">
                     <img src="./assets/icons/logo-red.svg" class="mr-3 h-6 sm:h-9" alt="Logo">
@@ -63,7 +80,7 @@
                             <a href="#" class="block py-2 pr-4 pl-3 hover:underline text-white">Login</a>
                         </li>
                         <li>
-                            <button class="block py-2 pr-4 pl-3 rounded-md bg-green w-full px-2 text-white">
+                            <button class="block py-2 pr-4 pl-3 rounded-md bg-nugg-green w-full px-2 text-white">
                                 Get Your Card
                             </button>
                         </li>
@@ -71,7 +88,8 @@
                 </div>
             </div>
         </nav>
-        <section class="py-3 flex md:w-10/12 flex-wrap w-full m-auto md:flex-row flex-col-reverse items-center md:justify-center my-5">
+        <section
+            class="py-3 flex md:w-10/12 flex-wrap w-full m-auto md:flex-row flex-col-reverse items-center md:justify-center my-5">
             <div class="w-full md:w-auto my-2 h-[45px] overflow-y-hidden overflow-x-scroll md:overflow-hidden">
                 <div class="px-3 flex gap-3 font-futuraDemi w-[900px] md:w-auto">
                     <h1 class="font-futuraDemi text-lg">Filter by Category</h1>
@@ -79,23 +97,23 @@
                         <button class="rounded-full px-4 py-0 border-2 border-red text-red">
                             Reviews
                         </button>
-                        <button class="rounded-full px-4 py-0 border-2 border-yellow text-yellow">
+                        <button class="rounded-full px-4 py-0 border-2 border-nugg-butterscotch text-nugg-butterscotch">
                             Lifestyle
                         </button>
                         <button class="rounded-full px-4 py-0 border-2 border-green text-green">
                             Education
                         </button>
-                        <button class="rounded-full px-4 py-0 border-2 border-aqua text-aqua">
+                        <button class="rounded-full px-4 py-0 border-2 border-nugg-sky text-nugg-sky">
                             Law
                         </button>
-                        <button class="rounded-full px-4 py-0 border-2 border-medium-orchid text-medium-orchid">
+                        <button class="rounded-full px-4 py-0 border-2 border-nugg-lavander text-nugg-lavander">
                             News
                         </button>
                     </div>
                 </div>
             </div>
             <div
-                class="md:w-4/12 bg-light-grey rounded-full my-3 flex item-center justify-between px-4 w-10/12 min-h-[40px] m-auto">
+                class="md:w-4/12 bg-nugg-ui-b2 rounded-full my-3 flex item-center justify-between px-4 w-10/12 min-h-[40px] m-auto">
                 <input type="text" class="bg-transparent w-11/12 outline-none" placeholder="Search" />
                 <img src="./assets/icons/search.svg" alt="" />
             </div>
@@ -105,19 +123,19 @@
         <section class="py-10 flex flex-col gap-2 items-start justify-around">
             <h1 class="text-blue text-2xl font-futuraBold md:flex-row">Trending Posts</h1>
             <div class="grid grid-lines md:grid-cols-2 md:grid-rows-3 gap-4 h-auto md:h-[590x]">
-                <div
-                    class="md:row-span-3 post rounded-lg bg-white p-7 flex flex-wrap">
+                <div class="md:row-span-3 post rounded-lg bg-white p-7 flex flex-wrap">
                     <img class="rounded-lg object-cover" src="./assets/images/pexels-andres-ayrton-6578830.png"
                         alt="" />
                     <div class="metadata flex-wrap-reverse gap-2 py-2 flex items-center justify-between w-full">
                         <div class="left">
-                            <a href="#category_link" class="relative z-50 rounded-full bg-yellow px-2 mr-1">
+                            <a href="#category_link" class="relative z-50 rounded-full bg-nugg-butterscotch px-2 mr-1">
                                 Lifestyle
                             </a>
-                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                            <span class="text-nugg-dark-grey text-sm">2 Minute Read</span>
                         </div>
                         <div class="right">
-                            <a href="#author_link" class="relative z-50 text-dark-grey text-lg">Mr the most longest name on earth!</a>
+                            <a href="#author_link" class="relative z-50 text-nugg-dark-grey text-lg">Mr the most longest name
+                                on earth!</a>
                         </div>
                     </div>
                     <div class="description">
@@ -135,11 +153,11 @@
                     <img class="rounded-lg w-full" src="./assets/images/Nugg Club Products Filled 2.png" alt="" />
                     <div class="metadata py-2 flex flex-wrap-reverse gap-2 items-center justify-between w-full">
                         <div class="left">
-                            <a href="#category_link" class="rounded-full bg-red px-2 mr-1">Review</a>
-                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                            <a href="#category_link" class="rounded-full bg-nugg-watermelon px-2 mr-1">Review</a>
+                            <span class="text-nugg-dark-grey text-sm">2 Minute Read</span>
                         </div>
                         <div class="right">
-                            <span class="text-dark-grey text-lg">Mr the most longest name on earth!</span>
+                            <span class="text-nugg-dark-grey text-lg">Mr the most longest name on earth!</span>
                         </div>
                     </div>
                     <div class="description">
@@ -154,7 +172,7 @@
                     </div>
                 </div>
                 <div
-                    class="md:col-start-2 md:col-span-2 weekly-wellness-tip bg-light-blue w-full rounded-lg text-white p-7">
+                    class="md:col-start-2 md:col-span-2 weekly-wellness-tip bg-nugg-blue-tint w-full rounded-lg text-white p-7">
                     <div class="header flex items-center justify-between">
                         <small>Weekly Wellness Tip</small>
                         <img src="./assets/icons/heart.svg" alt="" />
@@ -174,13 +192,13 @@
                     <div class="md:w-6/12">
                         <div class="metadata py-2 flex-wrap-reverse gap-2  flex items-center justify-between w-full">
                             <div class="left">
-                                <a href="#category_link" class="rounded-full bg-green px-2 mr-1">
+                                <a href="#category_link" class="rounded-full bg-nugg-green px-2 mr-1">
                                     Education
                                 </a>
-                                <span class="text-dark-grey text-sm">2 Minute Read</span>
+                                <span class="text-nugg-dark-grey text-sm">2 Minute Read</span>
                             </div>
                             <div class="right">
-                                <span class="text-dark-grey text-lg">Mr the most longest name on earth!</span>
+                                <span class="text-nugg-dark-grey text-lg">Mr the most longest name on earth!</span>
                             </div>
                         </div>
                         <div class="description">
@@ -201,11 +219,11 @@
                     <div class="md:w-6/12">
                         <div class="metadata py-2 flex-wrap-reverse gap-2 flex items-center justify-between w-full">
                             <div class="left">
-                                <a href="#category_link" class="rounded-full bg-aqua px-2 mr-1">Laws</a>
-                                <span class="text-dark-grey text-sm">2 Minute Read</span>
+                                <a href="#category_link" class="rounded-full bg-nugg-sky px-2 mr-1">Laws</a>
+                                <span class="text-nugg-dark-grey text-sm">2 Minute Read</span>
                             </div>
                             <div class="right">
-                                <span class="text-dark-grey text-lg">Mr the most longest name on earth!</span>
+                                <span class="text-nugg-dark-grey text-lg">Mr the most longest name on earth!</span>
                             </div>
                         </div>
                         <div class="description">
@@ -225,13 +243,13 @@
                     <div class="md:w-6/12">
                         <div class="metadata flex-wrap-reverse gap-2 py-2 flex items-center justify-between w-full">
                             <div class="left">
-                                <a href="#category_link" class="rounded-full bg-medium-orchid px-2 mr-1">
+                                <a href="#category_link" class="rounded-full bg-nugg-lavander px-2 mr-1">
                                     News
                                 </a>
-                                <span class="text-dark-grey text-sm">2 Minute Read</span>
+                                <span class="text-nugg-dark-grey text-sm">2 Minute Read</span>
                             </div>
                             <div class="right">
-                                <span class="text-dark-grey text-lg">Mr the most longest name on earth!</span>
+                                <span class="text-nugg-dark-grey text-lg">Mr the most longest name on earth!</span>
                             </div>
                         </div>
                         <div class="description">
@@ -251,13 +269,13 @@
                     <div class="md:w-6/12">
                         <div class="metadata flex-wrap-reverse gap-2 py-2 flex items-center justify-between w-full">
                             <div class="left">
-                                <a href="#category_link" class="rounded-full bg-yellow px-2 mr-1">
+                                <a href="#category_link" class="rounded-full bg-nugg-butterscotch px-2 mr-1">
                                     Lifestyle
                                 </a>
-                                <span class="text-dark-grey text-sm">2 Minute Read</span>
+                                <span class="text-nugg-dark-grey text-sm">2 Minute Read</span>
                             </div>
                             <div class="right">
-                                <span class="text-dark-grey text-lg">Mr the most longest name on earth!</span>
+                                <span class="text-nugg-dark-grey text-lg">Mr the most longest name on earth!</span>
                             </div>
                         </div>
                         <div class="description">
@@ -277,17 +295,18 @@
         <section class="py-5 gap-3 flex flex-wrap items-center justify-start">
             <h1 class="text-blue text-2xl font-futuraBold">Top Posts</h1>
             <div class="grid grid-lines md:grid-cols-3 md:grid-rows-3 gap-5 pb-7">
-                <div href="#blog_link" class="before:cursor-pointer before:absolute before:inset-0 before:w-full before:h-full post rounded-lg bg-white p-7 flex flex-wrap">
+                <div href="#blog_link"
+                    class="before:cursor-pointer before:absolute before:inset-0 before:w-full before:h-full post rounded-lg bg-white p-7 flex flex-wrap">
                     <img class="rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png" alt="" />
                     <div class="metadata flex-wrap-reverse gap-2 py-2 flex items-center justify-between w-full">
                         <div class="left">
-                            <a href="#category_link" class="relative z-50 rounded-full bg-green px-2 mr-1">
+                            <a href="#category_link" class="relative z-50 rounded-full bg-nugg-green px-2 mr-1">
                                 Education
                             </a>
-                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                            <span class="text-nugg-dark-grey text-sm">2 Minute Read</span>
                         </div>
                         <div class="right">
-                            <span class="text-dark-grey text-lg">Mr the most longest name on earth!</span>
+                            <span class="text-nugg-dark-grey text-lg">Mr the most longest name on earth!</span>
                         </div>
                     </div>
                     <div class="description">
@@ -305,13 +324,13 @@
                     <img class="rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png" alt="" />
                     <div class="metadata flex-wrap-reverse gap-2 py-2 flex items-center justify-between w-full">
                         <div class="left">
-                            <a href="#category_link" class="rounded-full bg-green px-2 mr-1">
+                            <a href="#category_link" class="rounded-full bg-nugg-green px-2 mr-1">
                                 Education
                             </a>
-                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                            <span class="text-nugg-dark-grey text-sm">2 Minute Read</span>
                         </div>
                         <div class="right">
-                            <span class="text-dark-grey text-lg">Mr the most longest name on earth!</span>
+                            <span class="text-nugg-dark-grey text-lg">Mr the most longest name on earth!</span>
                         </div>
                     </div>
                     <div class="description">
@@ -327,7 +346,7 @@
                 </div>
 
                 <!-- Ad -->
-                <div class="md:row-span-2 w-full bg-orange">
+                <div class="md:row-span-2 w-full bg-nugg-orange">
                     <h2 class="w-10/12 m-auto text-3xl text-white py-3 font-futuraDemi">
                         Dispensaries <br />
                         hate us. <br />
@@ -344,13 +363,13 @@
                     <img class="rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png" alt="" />
                     <div class="metadata flex-wrap-reverse gap-2 py-2 flex items-center justify-between w-full">
                         <div class="left">
-                            <a href="#category_link" class="rounded-full bg-green px-2 mr-1">
+                            <a href="#category_link" class="rounded-full bg-nugg-green px-2 mr-1">
                                 Education
                             </a>
-                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                            <span class="text-nugg-dark-grey text-sm">2 Minute Read</span>
                         </div>
                         <div class="right">
-                            <span class="text-dark-grey text-lg">Mr the most longest name on earth!</span>
+                            <span class="text-nugg-dark-grey text-lg">Mr the most longest name on earth!</span>
                         </div>
                     </div>
                     <div class="description">
@@ -368,11 +387,11 @@
                     <img class="rounded-lg" src="./assets/images/pexels-andres-ayrton-6578830.png" alt="" />
                     <div class="metadata flex-wrap-reverse gap-2 py-2 flex items-center justify-between w-full">
                         <div class="left">
-                            <a href="#category_link" class="rounded-full bg-aqua px-2 mr-1">Laws</a>
-                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                            <a href="#category_link" class="rounded-full bg-nugg-sky px-2 mr-1">Laws</a>
+                            <span class="text-nugg-dark-grey text-sm">2 Minute Read</span>
                         </div>
                         <div class="right">
-                            <span class="text-dark-grey text-lg">Mr the most longest name on earth!</span>
+                            <span class="text-nugg-dark-grey text-lg">Mr the most longest name on earth!</span>
                         </div>
                     </div>
                     <div class="description">
@@ -390,13 +409,13 @@
                     <img class="rounded-lg" src="./assets/images/pexels-ketut-subiyanto-4473878 1.png" alt="" />
                     <div class="metadata flex-wrap-reverse gap-2 py-2 flex items-center justify-between w-full">
                         <div class="left">
-                            <a href="#category_link" class="rounded-full bg-medium-orchid px-2 mr-1">
+                            <a href="#category_link" class="rounded-full bg-nugg-lavander px-2 mr-1">
                                 News
                             </a>
-                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                            <span class="text-nugg-dark-grey text-sm">2 Minute Read</span>
                         </div>
                         <div class="right">
-                            <span class="text-dark-grey text-lg">Mr the most longest name on earth!</span>
+                            <span class="text-nugg-dark-grey text-lg">Mr the most longest name on earth!</span>
                         </div>
                     </div>
                     <div class="description">
@@ -415,13 +434,13 @@
                         alt="" />
                     <div class="metadata flex-wrap-reverse gap-2 py-2 flex items-center justify-between w-full">
                         <div class="left">
-                            <a href="#category_link" class="rounded-full bg-yellow px-2 mr-1">
+                            <a href="#category_link" class="rounded-full bg-nugg-butterscotch px-2 mr-1">
                                 Lifestyle
                             </a>
-                            <span class="text-dark-grey text-sm">2 Minute Read</span>
+                            <span class="text-nugg-dark-grey text-sm">2 Minute Read</span>
                         </div>
                         <div class="right">
-                            <span class="text-dark-grey text-lg">Mr the most longest name on earth!</span>
+                            <span class="text-nugg-dark-grey text-lg">Mr the most longest name on earth!</span>
                         </div>
                     </div>
                     <div class="description">
@@ -440,7 +459,7 @@
                     <img class="object-cover w-full h-full" src="./assets/images/Z email 22 1.png" alt="" />
                 </div>
             </div>
-            <button class="rounded-md bg-light-blue w-full text-white h-[60px] text-xl font-futuraDemi">
+            <button class="rounded-md bg-nugg-blue-tint w-full text-white h-[60px] text-xl font-futuraDemi">
                 Load More Articles
             </button>
         </section>
@@ -462,13 +481,13 @@
                 cannabis healthcare ecosystem.
             </p>
         </div>
-        <button class="rounded-md bg-green w-full md:w-5/12 h-[57px] text-xl font-futuraDemi">
+        <button class="rounded-md bg-nugg-green w-full md:w-5/12 h-[57px] text-xl font-futuraDemi">
             Get Your Card
         </button>
-        <span class="text-grey">Billed only if approved.</span>
+        <span class="text-nugg-dark-grey">Billed only if approved.</span>
     </section>
     <section
-        class="subscribe-card rounded-md bg-light-blue w-10/12 md:w-7/12 md:justify-center md:items-center m-auto my-20 p-10 text-white md: flex flex-col gap-2">
+        class="subscribe-card rounded-md bg-nugg-blue-tint w-10/12 md:w-7/12 md:justify-center md:items-center m-auto my-20 p-10 text-white md: flex flex-col gap-2">
         <h2 class="text-2xl font-futuraDemi">Weekly wellness
             tips and updates? Subscribe :)</h2>
         <span class="font-futuraLight text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -476,7 +495,7 @@
         <div class="bg-white shadow-md rounded-md py-2 my-2 flex items-center justify-between px-2 md:w-10/12">
             <input type="text" placeholder="enter your email"
                 class="ml-2 text-black bg-transparent outline-none w-9/12">
-            <button class="rounded-md bg-blue p-3 md:w-3/12">signup</button>
+            <button class="rounded-md bg-nugg-blue p-3 md:w-3/12">signup</button>
         </div>
     </section>
     <div class="flex items-center justify-center w-full py-3">
