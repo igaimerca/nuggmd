@@ -39,6 +39,7 @@
                         'nugg-cranberry': '#E4606E',
                         'nugg-orange': "#F78178",
                         "nugg-dark-grey": "#929292",
+                        'nugg-yellow': "#FEE561"
                     },
                     fontFamily: {
                         'futura-pt': ['futura-pt', 'sans-serif'],
@@ -90,51 +91,94 @@
             class="flex flex-col-reverse flex-wrap items-center w-full py-5 m-auto my-5 md:w-10/12 md:flex-row md:justify-center">
             <div class="flex flex-col items-center justify-center">
                 <p class="text-lg font-medium text-nugg-dark-grey">As seen on</p>
-              <div class="w-auto md:w-auto my-2 h-[40px] overflow-y-hidden overflow-x-scroll md:overflow-hidden companies-banners flex flex-row gap-3">
-                <img src="./assets/images/partners-1.png" class="object-cover" alt="partners logos">
-                <img src="./assets/images/partners-2.png" class="object-cover" alt="partners logos">
-              </div>
+                <div
+                    class="w-auto md:w-auto my-2 h-[40px] overflow-y-hidden overflow-x-scroll md:overflow-hidden companies-banners flex flex-row gap-3">
+                    <img src="./assets/images/partners-1.png" class="object-cover" alt="partners logos">
+                    <img src="./assets/images/partners-2.png" class="object-cover" alt="partners logos">
+                </div>
             </div>
         </section>
     </header>
-    <main class="px-5 m-auto max-w-7xl">
-        <section class="flex flex-col items-start justify-around gap-2 py-10 bg-nugg-ui-b2">
-          <h1 class="text-3xl font-bold text-center text-nugg-blue">Unlock cannabis wellness in as little as 15 minutes.</h1>
-          <img class="my-[-8rem]" src="./assets/images/new MD card shadow fix 1.png" alt="new card">
-          <div class="flex flex-col w-10/12 gap-4 m-auto options">
+    <section class="flex flex-col items-start justify-around gap-2 py-10 bg-nugg-ui-b2">
+        <h1 class="text-3xl font-bold text-center text-nugg-blue">Unlock cannabis wellness in as little as 15 minutes.
+        </h1>
+        <img class="my-[-8rem]" src="./assets/images/new MD card shadow fix 1.png" alt="new card">
+        <div class="flex flex-col w-10/12 gap-4 m-auto options">
             <div class="flex items-start justify-center gap-3">
                 <img class="pt-2" src="./assets/icons/checkmark.svg" alt="">
                 <div class="flex flex-col gap-2">
                     <b class="text-xl">Signup</b>
-                    <p class="max-w-8/12">Fill out a 30-second, confidential questionnaire. We will send it to one of our available medical marijuana doctors for review.</p>
+                    <p class="max-w-8/12">Fill out a 30-second, confidential questionnaire. We will send it to one of
+                        our available medical marijuana doctors for review.</p>
                 </div>
             </div>
             <div class="flex items-start justify-center gap-3 option">
                 <img class="pt-2" src="./assets/icons/checkmark.svg" alt="">
                 <div class="flex flex-col gap-2">
                     <b class="text-xl">Chat with a Doctor</b>
-                    <p class="max-w-8/12">Our liscensed physicians are standing by to help teach and evaluate your cannabis needs.</p>
+                    <p class="max-w-8/12">Our liscensed physicians are standing by to help teach and evaluate your
+                        cannabis needs.</p>
                 </div>
             </div>
             <div class="flex items-start justify-center gap-3 option">
                 <img class="pt-2" src="./assets/icons/checkmark.svg" alt="">
                 <div class="flex flex-col gap-2">
                     <b class="text-xl">Instant Access</b>
-                    <p class="max-w-8/12">Your medical marijuana recommendation will be available immediately, and your hard copy will be mailed the same day.</p>
+                    <p class="max-w-8/12">Your medical marijuana recommendation will be available immediately, and your
+                        hard copy will be mailed the same day.</p>
                 </div>
             </div>
-          </div>
-          <div class="flex w-10/12 gap-2 p-2 mt-10 m-auto bg-white rounded-md h-[58.61px]">
+        </div>
+        <div class="flex w-10/12 gap-2 p-2 mt-10 m-auto bg-white rounded-md h-[58.61px]">
             <select class="w-10/12 text-nugg-dark-grey">
                 <option value="">First, select your state</option>
             </select>
             <div class="flex items-center justify-center w-2/12 h-full rounded-md bg-nugg-green">
                 <img src="./assets/icons/white-checkmark.svg" alt="">
             </div>
-          </div>
-        </section>
-    </main>
-    <section class="flex flex-col items-center justify-center gap-6 p-16 py-24 my-10 text-white get-your-card">
+        </div>
+    </section>
+    <section class="bg-nugg-blue py-12 px-2 flex flex-col items-center gap-8">
+        <h1 class="text-2xl font-bold text-center text-white">Why get a medical cannabis
+            card in CA ? Meet your perks.</h1>
+            <div class="perks-cards gap-4 flex flex-wrap items-center justify-center">
+                <div class="relative perk rounded-md border-2 border-nugg-watermelon flex items-center justify-center flex-col gap-3 w-[328px] h-[125px] text-center">
+                    <h2 class="text-nugg-watermelon text-xl font-bold leading-tight w-3/5">Unlock cannabis access for 18+</h2>
+                    <a href="#" class="w-full underline text-white text-xs">Tap to Learn More</a>
+                    <img class="absolute top-2 right-2" src="./assets/icons/heart.svg" alt="">
+                </div>
+                <div class="relative perk rounded-md border-2 border-nugg-whiskey flex items-center justify-center flex-col gap-3 w-[328px] h-[125px] text-center">
+                    <h2 class="text-nugg-whiskey text-xl font-bold leading-tight w-3/5">Get larger quantity
+                        limits on purchases.</h2>
+                    <a href="#" class="w-full underline text-white text-xs">Tap to Learn More</a>
+                    <img class="absolute top-2 right-2" src="./assets/icons/heart.svg" alt="">
+                </div>
+                <div class="relative perk rounded-md border-2 border-nugg-yellow flex items-center justify-center flex-col gap-3 w-[328px] h-[125px] text-center">
+                    <h2 class="text-nugg-yellow text-xl font-bold leading-tight w-1/3">Save big on sales tax.</h2>
+                    <a href="#" class="w-full underline text-white text-xs">Tap to Learn More</a>
+                    <img class="absolute top-2 right-2" src="./assets/icons/heart.svg" alt="">
+                </div>
+                <div class="relative perk rounded-md border-2 border-nugg-green flex items-center justify-center flex-col gap-3 w-[328px] h-[125px] text-center">
+                    <h2 class="text-nugg-green text-xl font-bold leading-tight w-1/2">Enjoy a wider product selection.</h2>
+                    <a href="#" class="w-full underline text-white text-xs">Tap to Learn More</a>
+                    <img class="absolute top-2 right-2" src="./assets/icons/heart.svg" alt="">
+                </div>
+                <div class="relative perk rounded-md border-2 border-nugg-sky flex items-center justify-center flex-col gap-3 w-[328px] h-[125px] text-center">
+                    <h2 class="text-nugg-sky text-xl font-bold leading-tight w-3/5">Explore more dispensary options.</h2>
+                    <a href="#" class="w-full underline text-white text-xs">Tap to Learn More</a>
+                    <img class="absolute top-2 right-2" src="./assets/icons/heart.svg" alt="">
+                </div>
+                <div class="relative perk rounded-md border-2 border-nugg-lavander flex items-center justify-center flex-col gap-3 w-[328px] h-[125px] text-center">
+                    <h2 class="text-nugg-lavander text-xl font-bold leading-tight w-3/5">Shop exclusive deals from our network.</h2>
+                    <a href="#" class="w-full underline text-white text-xs">Tap to Learn More</a>
+                    <img class="absolute top-2 right-2" src="./assets/icons/heart.svg" alt="">
+                </div>
+            </div>
+            <button class="rounded-md bg-nugg-green text-white w-1/2 md:w-5/12 h-[57px] text-xl font-futura-pt-bold">
+                Get Your Card
+            </button>
+    </section>
+    <section class="flex flex-col items-center justify-center gap-6 p-16 py-24 text-white get-your-card">
         <h2 class="text-2xl font-futura-pt-bold">The NuggMD Promise</h2>
         <div class="md:w-5/12">
             <p class="font-futura-pt">
