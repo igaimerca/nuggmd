@@ -14,7 +14,7 @@
    ```
 2. Run in browser
    ```sh
-    . cd nuggmd
+    . cd nugg-html
     . Open index.html in your browser!
    ```
 
