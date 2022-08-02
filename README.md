@@ -10,11 +10,11 @@
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/igaimerca/nuggmd.git
+   git clone https://github.com/sigmabold/nugg-html.git
    ```
 2. Run in browser
    ```sh
-    . cd nuggmd
+    . cd nugg-html
     . Open index.html in your browser!
    ```
 
