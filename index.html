@@ -130,43 +130,45 @@
     </header>
     <main class="px-5 m-auto max-w-6xl">
         <section class="flex flex-col items-start justify-around gap-5 py-10">
-            <h2 class="text-2xl text-nugg-blue font-futura-pt text-center md:text-start w-full font-bold md:flex-row">Trending Posts</h2>
+            <h2 class="md:hidden text-2xl text-nugg-blue font-futura-pt text-center md:text-start w-full font-bold md:flex-row">Featured Blog Posts</h2>
+            <h2 class="hidden md:block text-2xl text-nugg-blue font-futura-pt text-center md:text-start w-full font-bold md:flex-row">Trending Posts</h2>
             <div class="grid grid-lines md:grid-cols-3 md:grid-rows-3 gap-4 h-auto md:h-[590x]">
-                <article class="relative flex flex-wrap bg-white rounded-lg md:row-span-3 md:col-span-2 post p-7">
+                <article class="relative flex flex-wrap bg-white rounded-lg md:row-span-3 md:col-span-2 post py-7 px-6 gap-3">
                     <img class="object-cover rounded-lg" src="./assets/images/pexels-andres-ayrton-6578830.png"
                         alt="" />
                     <div class="flex flex-wrap items-center justify-between w-full gap-2 py-2 metadata">
-                        <div class="left">
-                            <a href="#category_link" class="relative z-50 px-2 mr-1 rounded-full bg-nugg-butterscotch">
+                        <div class="flex items-center left min-w-[60%]">
+                            <a href="#category_link" class="py-[1px] flex items-center justify-center relative z-50 px-3 mr-2 rounded-full bg-nugg-butterscotch font-medium">
                                 Lifestyle
                             </a>
                             <span class="text-sm text-nugg-dark-grey">2 Minute Read</span>
                         </div>
                         <div class="right">
-                            <a href="#author_link" class="relative z-50 text-lg text-nugg-dark-grey">Anthony
-                                Pellegrino</a>
+                            <a href="#author_link" class="relative z-50 text-sm text-nugg-dark-grey">Writer Name</a>
                         </div>
                     </div>
                     <div class="description">
                         <a href="#blog"
                             class="text-2xl before:absolute before:inset-0 before:w-full before:h-full font-bold">
-                            THC for TLC? Let’s talk cannabis and intimacy.
+                            THC for TLC? Let's talk cannabis and intimacy.
                         </a>
                         <p class="my-2">
                             2 line preview about the article. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo nec ultrices dui sapien eget. Ullamcorper ske. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo nec ultrices dui sapien eget. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan. Lorem ipsum dolor sit amet,  aliqua. Justo nec ultrices dui sapien eget. Ullamcorper ske. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
                         </p>
                     </div>
                 </article>
-                <article class="relative flex flex-wrap row-span-2 gap-2 bg-white rounded-lg md:col-start-3 md:row-span-2 post p-7">
-                    <img class="w-full rounded-lg" src="./assets/images/Nugg Club Products Filled 2.png" alt="" />
+                <article class="relative flex flex-wrap bg-white rounded-lg md:row-span-3 md:col-span-2 post py-7 px-6 gap-3">
+                    <img class="object-cover rounded-lg" src="./assets/images/Nugg Club Products Filled 2.png"
+                        alt="" />
                     <div class="flex flex-wrap items-center justify-between w-full gap-2 py-2 metadata">
-                        <div class="left">
-                            <a href="#category_link"
-                                class="relative z-50 px-2 mr-1 rounded-full bg-nugg-watermelon">Review</a>
+                        <div class="flex items-center left min-w-[60%]">
+                            <a href="#category_link" class="py-[1px] flex items-center justify-center relative z-50 px-3 mr-2 rounded-full bg-nugg-watermelon font-medium">
+                                Review
+                            </a>
                             <span class="text-sm text-nugg-dark-grey">2 Minute Read</span>
                         </div>
                         <div class="right">
-                            <a href="#author" class="relative z-50 text-lg text-nugg-dark-grey">Anthony Pellegrino</a>
+                            <a href="#author_link" class="relative z-50 text-sm text-nugg-dark-grey">Writer Name</a>
                         </div>
                     </div>
                     <div class="description">
