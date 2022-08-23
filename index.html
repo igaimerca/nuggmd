@@ -48,6 +48,7 @@
             },
         }
     </script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
         .no-scrollbar::-webkit-scrollbar {
             display: none;
@@ -62,17 +63,22 @@
 
 <body class="p-0 m-0 font-futura-pt bg-nugg-ui-b2">
     <!-- navbar -->
-    <header class="w-full bg-white">
+    <header x-data="{ isOpen: false }" class="w-full bg-white">
         <nav class="px-4 py-5 bg-nugg-blue sm:px-4">
             <div class="container flex flex-wrap items-center justify-between mx-auto">
-                <a href="https://nuggmd.com/" class="flex items-center">
+                <a href="https://nuggmd.com/" class="hidden md:inline-block flex items-center">
                     <img src="./assets/icons/logo-white.svg" class="h-6 mr-3 sm:h-9" alt="Logo">
                 </a>
-                <button type="button"
-                    class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
-                    <span class="sr-only">Toggle main menu</span>
-                    <img src="./assets/icons/menu.svg" alt="">
-                </button>
+                <div class="md:hidden w-full flex items-center justify-between">
+                    <a href="https://nuggmd.com/" class="flex items-center">
+                        <img src="./assets/icons/logo-white.svg" class="h-6 mr-3 sm:h-9" alt="Logo">
+                    </a>
+                    <button @click="isOpen = !isOpen" type="button"
+                        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                        <span class="sr-only">Toggle main menu</span>
+                        <img src="./assets/icons/menu.svg" alt="">
+                    </button>
+                </div>
                 <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                     <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                         <li>
@@ -94,6 +100,33 @@
                         </li>
                     </ul>
                 </div>
+                <div class="md:hidden mobile-navbar">
+                    <div class="z-10 fixed left-0 w-full p-5 bg-white rounded-lg shadow-xl top-16" x-show="isOpen"
+                        @click.away=" isOpen = false">
+                        <div class="w-full md:w-auto" id="navbar-default">
+                            <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 font-medium">
+                                <li>
+                                    <a href="#" class="block py-2 pl-3 pr-4 underline" aria-current="page">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block py-2 pl-3 pr-4 hover:underline">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block py-2 pl-3 pr-4 hover:underline">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="block py-2 pl-3 pr-4 hover:underline">Login</a>
+                                </li>
+                                <li>
+                                    <button
+                                        class="block w-full px-2 text-white py-2 pl-3 pr-4 rounded-md bg-nugg-green">
+                                        Get Your Card
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
         <section
@@ -103,12 +136,10 @@
                 <div class="px-3 flex gap-3 items-center w-[900px] md:h-full md:w-auto">
                     <h2 class="text-base font-futura-pt font-bold">Filter by Category</h2>
                     <div class="flex gap-3 font-bold posts-categories font-futura-pt">
-                        <button
-                            class="rounded-full px-5 text-sm border-2 border-nugg-watermelon text-nugg-watermelon">
+                        <button class="rounded-full px-5 text-sm border-2 border-nugg-watermelon text-nugg-watermelon">
                             Reviews
                         </button>
-                        <button
-                            class="rounded-full px-5 border-2 border-nugg-butterscotch text-nugg-butterscotch">
+                        <button class="rounded-full px-5 border-2 border-nugg-butterscotch text-nugg-butterscotch">
                             Lifestyle
                         </button>
                         <button class="rounded-full px-5 text-sm border-2 border-nugg-green text-nugg-green">
@@ -117,15 +148,13 @@
                         <button class="rounded-full px-5 text-sm border-2 border-nugg-sky text-nugg-sky">
                             Law
                         </button>
-                        <button
-                            class="rounded-full px-5 text-sm border-2 border-nugg-lavander text-nugg-lavander">
+                        <button class="rounded-full px-5 text-sm border-2 border-nugg-lavander text-nugg-lavander">
                             News
                         </button>
                     </div>
                 </div>
             </div>
-            <div
-                class="md:w-4/12 bg-nugg-ui-b2 rounded-full flex item-center justify-between px-5 w-10/12 mx-auto">
+            <div class="md:w-4/12 bg-nugg-ui-b2 rounded-full flex item-center justify-between px-5 w-10/12 mx-auto">
                 <input type="text" class=" px-5 py-[3px] w-11/12 bg-transparent outline-none" placeholder="Search" />
                 <img src="./assets/icons/search.svg" alt="" />
             </div>
@@ -140,8 +169,7 @@
                 class="hidden md:block text-2xl text-nugg-blue font-futura-pt text-center md:text-start w-full font-bold md:flex-row">
                 Trending Posts</h2>
             <div class="grid grid-lines md:grid-cols-3 md:grid-rows-3 gap-5 h-auto md:h-[590x]">
-                <article
-                    class="relative flex flex-wrap bg-white rounded-lg md:row-span-3 md:col-span-2 post py-7 px-6">
+                <article class="relative flex flex-wrap bg-white rounded-lg md:row-span-3 md:col-span-2 post py-7 px-6">
                     <img class="object-cover rounded-lg" src="./assets/images/pexels-andres-ayrton-6578830.png"
                         alt="" />
                     <div class="flex flex-wrap items-center justify-between w-full gap-2 pb-2 pt-4 metadata">
@@ -175,7 +203,8 @@
                 </article>
                 <article
                     class="relative flex flex-wrap bg-white rounded-lg row-span-2 md:col-start-3 md:row-span-2 post py-7 px-6">
-                    <img class="object-cover rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png" alt="" />
+                    <img class="object-cover rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png"
+                        alt="" />
                     <div class="flex flex-wrap items-center justify-between w-full gap-2 pb-2 pt-4 metadata">
                         <div class="flex items-center left min-w-[60%]">
                             <a href="#category_link"
@@ -344,7 +373,8 @@
             <h2 class="text-2xl text-nugg-blue text-center md:text-start w-full font-bold">Top Posts</h2>
             <div class="grid gap-5 grid-lines md:grid-cols-3 md:grid-rows-3 pb-7">
                 <article class="relative flex flex-wrap bg-white rounded-lg post py-7 px-6">
-                    <img class="object-cover rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png" alt="" />
+                    <img class="object-cover rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png"
+                        alt="" />
                     <div class="flex flex-wrap items-center justify-between w-full gap-2 pb-2 pt-4 metadata">
                         <div class="flex items-center left min-w-[60%]">
                             <a href="#category_link"
@@ -370,7 +400,8 @@
                     </div>
                 </article>
                 <article class="relative flex flex-wrap bg-white rounded-lg post py-7 px-6">
-                    <img class="object-cover rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png" alt="" />
+                    <img class="object-cover rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png"
+                        alt="" />
                     <div class="flex flex-wrap items-center justify-between w-full gap-2 pb-2 pt-4 metadata">
                         <div class="flex items-center left min-w-[60%]">
                             <a href="#category_link"
@@ -412,7 +443,8 @@
                 </div>
 
                 <article class="relative flex flex-wrap bg-white rounded-lg post py-7 px-6">
-                    <img class="object-cover rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png" alt="" />
+                    <img class="object-cover rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png"
+                        alt="" />
                     <div class="flex flex-wrap items-center justify-between w-full gap-2 pb-2 pt-4 metadata">
                         <div class="flex items-center left min-w-[60%]">
                             <a href="#category_link"
@@ -438,7 +470,8 @@
                     </div>
                 </article>
                 <article class="relative flex flex-wrap bg-white rounded-lg post py-7 px-6">
-                    <img class="object-cover rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png" alt="" />
+                    <img class="object-cover rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png"
+                        alt="" />
                     <div class="flex flex-wrap items-center justify-between w-full gap-2 pb-2 pt-4 metadata">
                         <div class="flex items-center left min-w-[60%]">
                             <a href="#category_link"
@@ -464,7 +497,8 @@
                     </div>
                 </article>
                 <article class="relative flex flex-wrap bg-white rounded-lg post py-7 px-6">
-                    <img class="object-cover rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png" alt="" />
+                    <img class="object-cover rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png"
+                        alt="" />
                     <div class="flex flex-wrap items-center justify-between w-full gap-2 pb-2 pt-4 metadata">
                         <div class="flex items-center left min-w-[60%]">
                             <a href="#category_link"
@@ -490,7 +524,8 @@
                     </div>
                 </article>
                 <article class="relative flex flex-wrap bg-white rounded-lg post py-7 px-6">
-                    <img class="object-cover rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png" alt="" />
+                    <img class="object-cover rounded-lg" src="./assets/images/pexels-chadak-chakma-9385363 1.png"
+                        alt="" />
                     <div class="flex flex-wrap items-center justify-between w-full gap-2 pb-2 pt-4 metadata">
                         <div class="flex items-center left min-w-[60%]">
                             <a href="#category_link"
