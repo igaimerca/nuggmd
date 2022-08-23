@@ -233,7 +233,7 @@
                         <p class="my-2 break-all">
                             2 line preview about the article. Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            la met, consectetuatlsed....
+                            la met, consectetutr....
                         </p>
                     </div>
                 </article>
@@ -254,7 +254,7 @@
             <h2 class="text-2xl md:text-3xl text-nugg-blue text-center md:text-start w-full font-bold">New Posts</h2>
             <div class="flex flex-wrap gap-5 blogs">
                 <article
-                    class="relative flex flex-wrap items-center justify-center gap-6 bg-white rounded-lg post py-5 md:px-0">
+                    class="relative flex flex-wrap items-center justify-center gap-8 bg-white rounded-lg post py-5 md:px-0">
                     <img class="rounded-lg md:w-5/12" src="./assets/images/pexels-ketut-subiyanto-4473878 1.png"
                         alt="" />
                     <div class="md:w-6/12">
@@ -289,7 +289,7 @@
                 </article>
 
                 <article
-                    class="relative flex flex-wrap items-center justify-center gap-6 bg-white rounded-lg post py-5 md:px-0">
+                    class="relative flex flex-wrap items-center justify-center gap-8 bg-white rounded-lg post py-5 md:px-0">
                     <img class="rounded-lg md:w-5/12" src="./assets/images/pexels-ketut-subiyanto-4473878 1.png"
                         alt="" />
                     <div class="md:w-6/12">
@@ -323,7 +323,7 @@
                     </div>
                 </article>
                 <article
-                    class="relative flex flex-wrap items-center justify-center gap-6 bg-white rounded-lg post py-5 md:px-0">
+                    class="relative flex flex-wrap items-center justify-center gap-8 bg-white rounded-lg post py-5 md:px-0">
                     <img class="rounded-lg md:w-5/12" src="./assets/images/pexels-ketut-subiyanto-4473878 1.png"
                         alt="" />
                     <div class="md:w-6/12">
@@ -357,7 +357,7 @@
                     </div>
                 </article>
                 <article
-                    class="relative flex flex-wrap items-center justify-center gap-6 bg-white rounded-lg post py-5 md:px-0">
+                    class="relative flex flex-wrap items-center justify-center gap-8 bg-white rounded-lg post py-5 md:px-0">
                     <img class="rounded-lg md:w-5/12" src="./assets/images/pexels-ketut-subiyanto-4473878 1.png"
                         alt="" />
                     <div class="md:w-6/12">
@@ -428,7 +428,7 @@
                     <div class="flex flex-wrap items-center justify-between w-full gap-2 pb-2 pt-4 metadata">
                         <div class="flex items-center left min-w-[60%]">
                             <a href="#category_link"
-                                class="py-[1px] flex items-center justify-center relative z-50 px-3 mr-2 rounded-full bg-nugg-sky font-medium">
+                                class="flex items-center justify-center relative z-50 px-3 mr-2 rounded-full bg-nugg-sky font-medium">
                                 Laws
                             </a>
                             <span class="text-sm text-nugg-dark-grey">2 Minute Read</span>
@@ -583,35 +583,45 @@
             </button>
         </section>
     </main>
-    <section class="flex flex-col items-center justify-center gap-6 p-16 py-24 my-10 text-white get-your-card">
-        <h2 class="text-2xl font-bold">The NuggMD Promise</h2>
-        <div class="md:w-5/12">
-            <p class="font-futura-pt">
-                We are a team of technology enthusiasts and state-licensed doctors. We
-                believe all people deserve access to medical cannabis if they think it
-                might improve their quality of life. Since our founding in 2015 we've
-                held ourselves to the highest standards when recruiting physicians,
-                journalists, and legal experts to join our team.
+    <section class="flex flex-col items-center justify-center gap-6 p-16 py-24 md:py-40 my-24 text-white get-your-card">
+        <h2 class="text-2xl md:text-5xl font-bold">The NuggMD Promise</h2>
+        <div class="md:w-6/12 space-y-3">
+            <p class="font-light">
+                We are a team of technology enthusiasts and state-licensed doctors. We believe all people deserve access to medical cannabis if they think it might improve their quality of life. Since our founding in 2015 we've held ourselves to the highest standards when recruiting physicians, journalists, and legal experts to join our team. It's because of this network of passionate professionals that NuggMD is able to provide access to reliable cannabis information, trustworthy medical practitioners, and proactive updates in the cannabis healthcare ecosystem.
+‍
+
             </p>
-            <p class="font-futura-pt">
-                It's because of this network of passionate professionals that NuggMD
-                is able to provide access to reliable cannabis information,
-                trustworthy medical practitioners, and proactive updates in the
-                cannabis healthcare ecosystem.
+            <p class="font-light">
+                Whether you're a cannabis connoisseur or thinking of becoming a first-time medical marijuana patient, our doctors will listen to your needs and give you an honest opinion about whether they think cannabis can help.
             </p>
         </div>
-        <button class="rounded-md bg-nugg-green w-full md:w-5/12 h-[57px] text-xl font-bold">
-            Get Your Card
-        </button>
-        <span class="text-nugg-dark-grey">Billed only if approved.</span>
+        <div class="hidden md:inline-block ml-[2rem] flex flex-col mt-10 gap-2">
+            <div class="flex bg-white rounded-md h-[58.61px] w-[327px] gap-2 p-2 m-auto">
+                <select class="w-full text-nugg-dark-grey">
+                    <option value="">First, select your state</option>
+                </select>
+                <div
+                    class="w-full flex items-center justify-center w-2/12 h-full rounded-md bg-nugg-green">
+                    <img src="./assets/icons/white-checkmark.svg" alt="">
+                </div>
+            </div>
+            <p class="w-full text-center font-light">Get approved or your money back.</p>
+        </div>
+        <div class="md:hidden flex flex-col justify-center items-center w-10/12">
+            <button class="rounded-md bg-nugg-green w-full md:w-5/12 h-[57px] text-xl font-bold">
+                Get Your Card
+            </button>
+            <span class="text-nugg-dark-grey">Billed only if approved.</span>
+        </div>
+        
     </section>
     <section
-        class="flex flex-col gap-2 px-9 py-9 my-16 text-white rounded-md md:max-w-6xl w-9/12 mx-auto subscribe-card bg-nugg-blue-tint md:justify-center md:items-center">
-        <h2 class="text-[25px] md:text-3xl font-bold">Weekly wellness
+        class="flex flex-col gap-2 px-9 py-9 my-16 text-white rounded-md md:max-w-6xl w-9/12 md:w-7xl md:py-24 mx-auto subscribe-card bg-nugg-blue-tint md:justify-center md:items-center">
+        <h2 class="text-[25px] md:text-4xl font-bold">Weekly wellness
             tips and updates? Subscribe :)</h2>
-        <span class="font-futura-pt text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        <span class="font-futura-pt font-light text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna.</span>
-        <div class="flex items-center justify-between px-2 py-2 my-2 bg-white rounded-md shadow-md md:w-10/12">
+        <div class="flex items-center justify-between px-2 py-2 my-2 bg-white rounded-md shadow-md md:w-5/12">
             <input type="text" placeholder="enter your email"
                 class="w-9/12 ml-2 text-black bg-transparent outline-none">
             <button class="py-2 px-3 rounded-md bg-nugg-blue md:w-3/12">signup</button>
